@@ -11,6 +11,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "axios": "^0.18.0",
     "luxon": "^1.7.1",
     "vue": "^2.5.2",
