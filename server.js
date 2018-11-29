@@ -1,19 +1,10 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-
-const app = express();
-const port = 5000;
-const clientDir = 'dist';
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// Static files
-app.use(express.static(path.join(__dirname, clientDir)));
-
+var express = require('express');
+var path = require('path');
+var serveStatic = require('serve-static');
+app = express();
+app.use(serveStatic(__dirname + '/dist'));
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, clientDir, 'index.html'));
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
-
-app.listen(port, () => console.log(`Port server: ${port}`));
+var port = process.env.PORT || 5000;
+app.listen(port);
