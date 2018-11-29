@@ -1,0 +1,21 @@
+@media only screen and (max-width: 1024px) {
+  .login-form {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .login-form {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body {
+    height: 100%;
+  }
+  #app {
+    padding: 0 15px;
+  }
+  .login-form {
+    width: 100%;
+  }
+}
